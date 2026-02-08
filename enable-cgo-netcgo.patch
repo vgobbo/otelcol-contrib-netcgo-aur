@@ -1,6 +1,6 @@
---- a/Makefile	2026-02-08 17:03:34.745820726 +0100
-+++ b/Makefile	2026-02-08 17:03:54.442648983 +0100
-@@ -345,14 +345,14 @@
+--- a/Makefile	2026-02-03 16:50:06.000000000 +0100
++++ b/Makefile	2026-02-08 17:30:14.922785074 +0100
+@@ -438,14 +438,14 @@
  # Build the Collector executable.
  .PHONY: otelcontribcol
  otelcontribcol: genotelcontribcol

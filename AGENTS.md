@@ -32,6 +32,20 @@ This repository manages the Arch User Repository (AUR) package for the OpenTelem
 - Ensure `makedepends` and `depends` in the `PKGBUILD` are accurate.
 - If enabling features that require CGO (like the system resolver), ensure `go` and appropriate C libraries are available.
 
-### 5. Commit Standards
+### 5. Version Updates
+- When updating the package to a new version:
+  1. Update `pkgver` in `PKGBUILD`.
+  2. Reset `pkgrel` to `1`.
+  3. Run `makepkg -o` to fetch the new source.
+  4. Verify if existing patches still apply:
+     ```bash
+     cd src/opentelemetry-collector-contrib-<version>
+     patch --dry-run -p1 -i ../../enable-cgo-netcgo.patch
+     ```
+  5. If a patch fails, regenerate it.
+  6. Update checksums: `updpkgsums`.
+  7. Verify the build and update `.SRCINFO`.
+
+### 6. Commit Standards
 - Follow [Conventional Commits 1.0](https://www.conventionalcommits.org/en/v1.0.0/).
 - Common types: `feat`, `fix`, `chore`, `build`.
