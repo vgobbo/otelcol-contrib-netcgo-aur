@@ -29,6 +29,10 @@ If you are a developer or an LLM agent working on this repository:
 - Refer to `AGENTS.md` for specific instructions on patching, version updates, and build constraints.
 - Always regenerate `.SRCINFO` after modifying the `PKGBUILD`.
 
+## Acknowledgments
+
+This package is based on the initial work and maintenance by [Roger Coll](https://github.com/rogercoll).
+
 ## License
 
 The build files in this repository are licensed under the same license as the upstream project (Apache 2.0).
